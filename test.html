@@ -1,28 +1,44 @@
-<!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    background (5, 5, 245);
-    // The ground
-    fill(245, 240, 245);
-    rect(0, 300, 400, 100);  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pappa sin test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    // The sun
-    fill(247, 255, 0);
-    ellipse(80, 64, 100, 100);  
-    
-    // The snowman
-    fill(247, 247, 239);
-    ellipse(200, 300, 150, 150);
-    ellipse(200, 200, 100, 100);
-    ellipse(200, 120, 75, 75);
 </head>
 <body>
-    
 
-
-
-
-
-
+    <canvas id="mycanvas"></canvas>
 </body>
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+<script>
+    var programCode = function(processingInstance) {
+      with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
+          
+        // Paste code from Khan Academy here:
+        background (5, 5, 245);
+// The ground
+fill(245, 240, 245);
+rect(0, 300, 400, 100);  
+
+// The sun
+fill(247, 255, 0);
+ellipse(80, 64, 100, 100);  
+
+// The snowman
+fill(247, 247, 239);
+ellipse(200, 300, 150, 150);
+ellipse(200, 200, 100, 100);
+ellipse(200, 120, 75, 75);
+        
+      }};
+  
+    // Get the canvas that ProcessingJS will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function to ProcessingJS constructor
+    var processingInstance = new Processing(canvas, programCode); 
+    </script>
 </html>
